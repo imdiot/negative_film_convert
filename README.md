@@ -48,7 +48,7 @@ MakeTiff 的原理为：
 
 - multipliers: 基础的右侧缩放，不影响 LOG 斜率。对数码化时曝光不足的会有一定改善。
 - log invert: LOG 转换。会根据计算使用相对合适的的曲线。
-- normalization: 对齐通道，并尽量匹配95/685。
+- normalization: 对齐通道。
 - shadows wb: 暗部白平衡调整。
 - highlights wb: 亮部白平衡调整。
 - channel mixer: 一定程度上模拟负片色域。
