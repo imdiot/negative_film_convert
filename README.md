@@ -37,7 +37,7 @@ MakeTiff 的原理为：
 
 ### 其他方式生成线性 TIFF
 
- - RawTherapee darktabl e等软件，因依赖于 LibRaw，所以也可以生成合适的线性 TIFF。但需要做一些配置调整。
+ - RawTherapee darktable 等软件，因依赖于 LibRaw，所以也可以生成合适的线性 TIFF。但需要做一些配置调整。
  - Capture One 等，但由于这种常规 RAW 解码目的是为了生成好看的图片，所以会加入很多色彩调整，生成的线性 TIFF 理论上反而不合适负片校色使用。
 
 ### 使用插件对 TIFF 进行转换
