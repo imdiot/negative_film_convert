@@ -1,5 +1,11 @@
 # Negative Film Convert
 
+<div align="center">
+    <a href="/releases/download/0.0.2/negative.film.convert_PS_0.0.2.ccx">
+        <img src="./static/images/download.png" width="200" height="50" alt="logo">
+    </a>
+</div>
+
 ## 简介
 
 Photoshop插件，用于负片胶片校色，也可以作为负片处理的一个初始点。
