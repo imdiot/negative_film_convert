@@ -1,7 +1,7 @@
 # Negative Film Convert
 
 <div align="center">
-    <a href="https://github.com/imdiot/negative_film_convert/releases/download/0.0.2/negative.film.convert_PS_0.0.2.ccx">
+    <a href="/releases/latest/download/negative.film.convert_PS.ccx">
         <img src="./static/images/download.png" width="200" height="50" alt="logo">
     </a>
 </div>
