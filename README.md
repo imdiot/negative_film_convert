@@ -10,7 +10,7 @@
 
 Photoshop插件，用于负片胶片校色，也可以作为负片处理的一个初始点。
 
-![](./static/images/e.png)
+![](./static/images/screenshot.jpg)
 
 ## 使用方法
 
