@@ -6,51 +6,59 @@
     </a>
 </div>
 
-## 简介
+# 简介
 
 Photoshop插件，用于负片胶片校色，也可以作为负片处理的一个初始点。
 
 ![](./static/images/screenshot.jpg)
 
-## 使用方法
+# 线性TIFF
 
-### 线性TIFF
+为了达到比较好的转换效果，最好使用无色彩调整的16位线性TIFF格式。
 
-为了达到比较好的转换效果，最好使用线性TIFF格式，并且使用16位深度。
+部分扫描仪可通过扫描软件直接生成，可参照 ColorPerfect 提供的大部分扫描仪线性 TIFF 操作方法。[https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/](https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/)
 
-ColorPerfect 提供的大部分扫描仪线性 TIFF 操作方法 [https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/](https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/)
+RAW 可通过转换生成 TIFF。
 
-### MakeTiff
+# RAW 转 TIFF
+
+转换方式举例，可按需调整。
+
+## MakeTiff
 
 ColorPerfect 提供的免费工具，可以将各种RAW等格式转换为线性TIFF格式。使用比较简单，只需要拖入窗口即可。
 
-[MakeTiff 介绍](https://www.colorperfect.com/MakeTiff/)
-
-[MakeTiff 安装](https://www.colorperfect.com/MakeTiff/Installation/)
+[MakeTiff 介绍](https://www.colorperfect.com/MakeTiff/) [MakeTiff 安装](https://www.colorperfect.com/MakeTiff/Installation/)
 
 MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/using/adobe-dng-converter.html)
 
-### LibRaw 或 Dcraw
+## darktable
 
-MakeTiff 的原理为：
+(可选) Adobe DNG Converter 基础转换
 
-1. 调用 Adobe DNG Converter 进行基础的RAW转换，如去马赛克等。
-2. 调用 LibRaw 进行线性 TIFF 转换。
-3. 调用 exiftools 修改 TIFF 的 EXIF 信息。
+![](./static/images/darktable.jpg)
 
-所以直接使用 LibRaw 或 Dcraw 也可以达到基本一致的效果。
+关闭所有色彩优化调整。
 
+导入色彩档案文件 - 输入配置文件 - sRGB
 
-### 其他方式生成线性 TIFF
+同步修改历史
 
- - RawTherapee darktable 等软件，因依赖于 LibRaw，所以也可以生成合适的线性 TIFF。但需要做一些配置调整。
+选择合适的导出色彩空间导出16位 TIFF
+
+## RawTherapee
+
+## LibRaw 或 Dcraw
+
+1. (可选) Adobe DNG Converter 基础转换
+2. `dcraw -v -r 1 1 1 1 -H 1 -o 0 -4 -T raw文件`
+3. (可选) exiftools 复制 EXIF 信息。
+
+## 其他方式生成线性 TIFF
+
  - Capture One 等，但由于这种常规 RAW 解码目的是为了生成好看的图片，所以会加入很多色彩调整，生成的线性 TIFF 理论上反而不合适负片校色使用。
 
-### 使用插件对 TIFF 进行转换
-
-- 剪裁掉非底片区域，减少对计算的干扰。
-
-## 图层功能
+# 图层功能
 
 - multipliers: 基础的右侧缩放，对数码化时曝光不足的会有一定改善。
 - log invert: LOG 转换。会根据计算使用相对合适的的曲线。
@@ -59,9 +67,10 @@ MakeTiff 的原理为：
 - highlights wb: 亮部白平衡调整。
 - channel mixer: 一定程度上模拟负片色域。
   
-## 注意事项
+# 注意事项
 
 - 非开箱即用，需要根据实际情况调整。
+- 剪裁掉非底片区域，减少对计算的干扰。
 - 翻拍时尽量向右曝光
 - 调整曝光尽量在 tone mapping 之前的对数域中调整，最好只使用曲线工具的直线和单点曲线调整。
 - 因未考虑使用完全曝光区域，所以在图像中有完全曝光区域时会色彩不正确。
