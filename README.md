@@ -26,13 +26,15 @@ RAW 可通过转换生成 TIFF。
 
 ## MakeTiff
 
-ColorPerfect 提供的免费工具，可以将各种RAW等格式转换为线性TIFF格式。使用比较简单，只需要拖入窗口即可。
-
 [MakeTiff 介绍](https://www.colorperfect.com/MakeTiff/) [MakeTiff 安装](https://www.colorperfect.com/MakeTiff/Installation/)
+
+ColorPerfect 提供的免费工具。使用简单，拖入窗口即可。
 
 MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/using/adobe-dng-converter.html)
 
 ## darktable
+
+[https://www.darktable.org](https://www.darktable.org)
 
 (可选) Adobe DNG Converter 基础转换
 
@@ -48,10 +50,18 @@ MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/u
 
 ## RawTherapee
 
+[https://www.rawtherapee.com](https://www.rawtherapee.com)
+
 ## LibRaw 或 Dcraw
 
+[https://www.libraw.org](https://www.libraw.org)
+
+[https://dechifro.org/dcraw](https://dechifro.org/dcraw)
+
 1. (可选) Adobe DNG Converter 基础转换
-2. `dcraw -v -r 1 1 1 1 -H 1 -o 0 -4 -T raw文件`
+2. 转换 TIFF
+   -  LibRaw `dcraw_emu -v -r 1 1 1 1 -H 1 -o 0 -4 -T raw文件`
+   -  Dcraw `dcraw -v -r 1 1 1 1 -H 1 -o 0 -4 -T raw文件`
 3. (可选) exiftools 复制 EXIF 信息。
 
 ## 其他方式生成线性 TIFF
