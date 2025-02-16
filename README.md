@@ -36,9 +36,9 @@ MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/u
 
 [https://www.darktable.org](https://www.darktable.org)
 
-(可选) Adobe DNG Converter 基础转换
-
 ![](./static/images/darktable.jpg)
+
+(可选) Adobe DNG Converter 基础转换
 
 关闭所有色彩优化调整。
 
@@ -51,6 +51,18 @@ MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/u
 ## RawTherapee
 
 [https://www.rawtherapee.com](https://www.rawtherapee.com)
+
+![](./static/images/RawTherapee.jpg)
+
+(可选) Adobe DNG Converter 基础转换
+
+关闭 曝光-色调曲线 白平衡 捕图加锐
+
+调整 ICM 设置
+
+同步配置
+
+批量导出16位 TIFF
 
 ## LibRaw 或 Dcraw
 
