@@ -12,6 +12,10 @@ Photoshop插件，用于负片胶片校色，也可以作为负片处理的一�
 
 ![](./static/images/screenshot.jpg)
 
+# 要求
+
+- Photoshop 24.2 或以上版本
+
 # 线性TIFF
 
 为了达到比较好的转换效果，最好使用无色彩调整的16位线性TIFF格式。
