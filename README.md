@@ -18,11 +18,15 @@ Photoshop插件，用于负片胶片校色，也可以作为负片处理的一�
 
 # 线性TIFF
 
-为了达到比较好的转换效果，最好使用无色彩调整的16位线性TIFF格式。
+为了达到比较好的转换效果，最好使用无色彩调整的16位线性 TIFF 格式。
 
-部分扫描仪可通过扫描软件直接生成，可参照 ColorPerfect 提供的大部分扫描仪线性 TIFF 操作方法。[https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/](https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/)
+Gamma 对后续处理理论上没有影响，并不强制要求线性。但常见的 sRGB、BT.709 等的 Gamma 是个分段函数，在翻拍曝光不足，直方图靠近甚至进入分段函数线性区域的时候，还是会有肉眼可见的影响。所以还是无脑线性 TIFF 更方便些。
 
-RAW 可通过转换生成 TIFF。
+部分扫描仪可通过扫描软件直接生成16位线性 TIFF，可参照 ColorPerfect 提供的大部分扫描仪线性 TIFF 操作方法。[https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/](https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/)
+
+Hasselblad 3F 文件本质为多帧16位线性 TIFF。直接改后缀名使用。
+
+RAW 可通过转换生成 16位线性 TIFF。
 
 # RAW 转 TIFF
 
@@ -46,7 +50,7 @@ MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/u
 
 关闭所有色彩优化调整。
 
-导入色彩档案文件 - 输入配置文件 - sRGB
+导入色彩档案文件 - 输入配置文件 - sRGB(不知道应该选什么的一律sRGB)
 
 同步修改历史
 
@@ -60,9 +64,9 @@ MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/u
 
 (可选) Adobe DNG Converter 基础转换
 
-关闭 曝光-色调曲线 白平衡 捕图加锐
+关闭曝光-色调曲线、白平衡、捕图加锐等所有色彩优化调整。
 
-调整 ICM 设置
+调整 ICM 设置(不知道应该选什么的一律sRGB)
 
 同步配置
 
