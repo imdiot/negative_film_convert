@@ -16,6 +16,19 @@ Photoshop插件，用于负片胶片校色，也可以作为负片处理的一�
 
 - Photoshop 24.2 或以上版本
 
+# 安装
+
+## 自动
+
+双击 `.ccx` 文件自动唤起 `Adobe Creative Cloud` 安装。
+
+## 手动
+
+1. 将 `.ccx` 文件扩展名改为 `.zip`，解压缩。
+2. 将解压缩后的文件夹复制到一下路径：
+   - Windows: `C:\Users\用户名\AppData\Roaming\Adobe\UXP\Plugins\External`
+   - Mac: `~/Library/Application Support/Adobe/UXP/Plugins/External`
+
 # 线性TIFF
 
 为了达到比较好的转换效果，最好使用无色彩调整的16位线性 TIFF 格式。
