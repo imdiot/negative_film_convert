@@ -119,6 +119,7 @@ MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/u
 
     与单张校色区别：
     - 校色流程与应用校色流程分离。
+    - 数码化参数需要保持一致。
     - 对于整卷或同型号同时冲洗的整卷图像，有更好的一致性。
     - 多张合并相对于单张会有更少的颜色缺失，有更好的准确性。
 
