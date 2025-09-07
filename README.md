@@ -31,7 +31,7 @@ Photoshop插件，用于负片胶片校色，也可以作为负片处理的一�
    - Windows: `C:\Users\用户名\AppData\Roaming\Adobe\UXP\Plugins\External`
    - Mac: `~/Library/Application Support/Adobe/UXP/Plugins/External`
 
-# 线性TIFF
+# 线性 TIFF
 
 为了达到比较好的转换效果，最好使用无色彩调整的16位线性 TIFF 格式。
 
@@ -39,21 +39,31 @@ Gamma 对后续处理理论上没有影响，并不强制要求线性。但常�
 
 部分扫描仪可通过扫描软件直接生成16位线性 TIFF，可参照 ColorPerfect 提供的大部分扫描仪线性 TIFF 操作方法。[https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/](https://www.colorperfect.com/scanning-slides-and-negatives/creating-linear-scans/)
 
-Hasselblad 3F 文件本质为多帧16位线性 TIFF。直接改后缀名使用。
+Hasselblad 3F 文件本质为多帧16位线性 TIFF。直接改后缀名使用。或使用 Open Make Tiff 抽出数据帧和嵌入 ICC Profile。
 
 RAW 可通过转换生成 16位线性 TIFF。
 
-# RAW 转 TIFF
+# RAW 转 线性 TIFF
 
-转换方式举例，可按需调整。
+转换方式举例，可按需选择。
+
+## Open Make Tiff
+
+[https://github.com/imdiot/open_make_tiff](https://github.com/imdiot/open_make_tiff)
+
+MakeTiff 的开源替代品。
+
+(可选依赖) [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/using/adobe-dng-converter.html)
 
 ## MakeTiff
 
-[MakeTiff 介绍](https://www.colorperfect.com/MakeTiff/) [MakeTiff 安装](https://www.colorperfect.com/MakeTiff/Installation/)
+[MakeTiff 介绍](https://www.colorperfect.com/MakeTiff/)
 
-ColorPerfect 提供的免费工具。使用简单，拖入窗口即可。
+ColorPerfect 提供的 RAW 线性转换工具。使用简单，拖入窗口即可。
 
-MakeTiff 依赖于 [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/using/adobe-dng-converter.html)
+需要 ColorPerfect 许可证。
+
+(可选依赖) [Adobe DNG Converter](https://helpx.adobe.com/tw/camera-raw/using/adobe-dng-converter.html)
 
 ## darktable
 
