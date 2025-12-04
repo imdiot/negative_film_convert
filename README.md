@@ -20,9 +20,31 @@ Photoshop插件，用于负片胶片校色，也可以作为负片处理的一�
 
 # 安装
 
-## 自动
+## aescripts + aeplugins 的 ZXP/UXP 安装工具
+
+下载地址：[https://aescripts.com/learn/zxp-installer/](https://aescripts.com/learn/zxp-installer/)
+
+## Adobe Creative Cloud（基于 UPIA）
 
 双击 `.ccx` 文件自动唤起 `Adobe Creative Cloud` 安装。
+
+## UPIA（Adobe 官方 UXP 插件安装工具）
+
+通过命令行直接使用 UPIA 工具进行安装：
+
+Windows:
+```
+cd "C:\Program Files\Common Files\Adobe\Adobe Desktop Common\RemoteComponents\UPI\UnifiedPluginInstallerAgent"
+
+UnifiedPluginInstallerAgent.exe /install /path/to/plugin.ccx
+```
+
+Mac:
+```
+cd "/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS"
+
+./UnifiedPluginInstallerAgent --install /path/to/plugin.ccx
+```
 
 ## 手动
 
